@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элитная вилла 400м² в Мургле - Участок 700.000€</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .counter {
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .timeline-item {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+        
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-spacing {
+            margin-bottom: 4rem;
+        }
+        
+        .investment-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="fade-in">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                    Элитная вилла 400м² в Мургле
+                </h1>
+                <div class="bg-white rounded-2xl shadow-lg p-8 max-w-md mx-auto mb-8">
+                    <div class="text-4xl font-bold price-highlight mb-2">700.000€</div>
+                    <div class="text-gray-600 text-lg">Участок 2,535 м²</div>
+                    <div class="text-gray-500">Cesta dveh cesarjev</div>
+                </div>
+                <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                    Эксклюзивный инвестиционный проект в престижном районе Любляны
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Overview -->
+    <section class="py-16 section-spacing">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Обзор проекта</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/murgle/main/a6f7c854ffdaa0132fb53765c9721090ec118dca7c6ed08b7cb441dde2c4031d.jpg" 
+                         alt="3D рендеринг виллы" class="w-full rounded-2xl shadow-lg">
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Современная архитектура</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-home text-yellow-500 text-2xl mr-4"></i>
+                            <span class="text-lg">Жилая площадь: <strong>400 м²</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-chart-area text-yellow-500 text-2xl mr-4"></i>
+                            <span class="text-lg">Участок: <strong>2,535 м²</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-euro-sign text-yellow-500 text-2xl mr-4"></i>
+                            <span class="text-lg">Стоимость строительства: <strong>2,000€/м²</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-yellow-500 text-2xl mr-4"></i>
+                            <span class="text-lg">Срок строительства: <strong>23 месяца</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Photos -->
+    <section class="py-16 bg-white section-spacing">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Участок</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="fade-in">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/murgle/main/17467667_2025-06-27_11-32-24.jpg" 
+                         alt="Фото участка 1" class="w-full rounded-2xl shadow-lg">
+                </div>
+                <div class="fade-in">
+                    <img src="https://raw.githubusercontent.com/miragconsulting/murgle/main/17467668_2025-06-27_11-31-42.jpg" 
+                         alt="Фото участка 2" class="w-full rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Murgle -->
+    <section class="py-16 section-spacing">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">О районе Мургле</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 fade-in">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Мургле - престижный район Любляны, который сегодня является синонимом мира, безопасности и гармонии с природой. Район связан с Путем памяти и товарищества, что добавляет ему особую историческую ценность.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Cesta dveh cesarjev (Дорога двух Императоров) - один из самых престижных адресов Любляны. Архитектурный проект района получил первое место в конкурсе 1965 года, а в 1977 году авторы France и Marta Ivanšek были удостоены престижной Плечниковой награды.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ljubljana Rankings -->
+    <section class="py-16 bg-white section-spacing">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Словения в мировых рейтингах</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-2xl card-hover fade-in">
+                    <div class="text-5xl font-bold text-green-500 mb-4">8</div>
+                    <h3 class="text-xl font-semibold mb-2">место в мире</h3>
+                    <p class="text-gray-600">по безопасности<br>(Global Peace Index)</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-2xl card-hover fade-in">
+                    <div class="text-5xl font-bold text-blue-500 mb-4">91%</div>
+                    <h3 class="text-xl font-semibold mb-2">населения</h3>
+                    <p class="text-gray-600">чувствуют себя<br>в безопасности</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-2xl card-hover fade-in">
+                    <div class="text-5xl font-bold text-yellow-500 mb-4">TOP 10</div>
+                    <h3 class="text-xl font-semibold mb-2">в мире</h3>
+                    <p class="text-gray-600">экологически<br>чистых стран</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Construction Timeline -->
+    <section class="py-16 section-spacing">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Этапы строительства</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="timeline-item bg-white rounded-2xl shadow-lg p-6 flex items-center" style="animation-delay: 0.1s">
+                        <div class="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-6">1</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Подготовительный этап</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="text-gray-600">Разрешения, проектирование, подготовка участка</p>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium">3 месяца</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item bg-white rounded-2xl shadow-lg p-6 flex items-center" style="animation-delay: 0.2s">
+                        <div class="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-6">2</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Фундаментные работы</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="text-gray-600">Земляные работы, фундамент, цокольный этаж</p>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium">2 месяца</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item bg-white rounded-2xl shadow-lg p-6 flex items-center" style="animation-delay: 0.3s">
+                        <div class="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-6">3</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Конструктивные работы</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="text-gray-600">Возведение стен, перекрытий, кровли</p>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium">6 месяцев</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item bg-white rounded-2xl shadow-lg p-6 flex items-center" style="animation-delay: 0.4s">
+                        <div class="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-6">4</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Инженерные системы</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="text-gray-600">Электрика, сантехника, отопление, вентиляция</p>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium">4 месяца</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item bg-white rounded-2xl shadow-lg p-6 flex items-center" style="animation-delay: 0.5s">
+                        <div class="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-6">5</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Отделочные работы</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="text-gray-600">Внутренняя отделка, полы, окна, двери</p>
+                                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium">6 месяцев</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item bg-white rounded-2xl shadow-lg p-6 flex items-center" style="animation-delay: 0.6s">
+                        <div class="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-6">6</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Благоустройство</h3>
+                            <div class="flex justify-between items-center">
+                                <p class="text-gray-600">Ландшафтный дизайн, въездная зона, финишная отделка</p>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">2 месяца</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Общий срок реализации</h3>
+                        <div class="text-4xl font-bold price-highlight">23 месяца</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Analysis -->
+    <section class="py-16 bg-white section-spacing">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Финансовый анализ</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="investment-card rounded-2xl shadow-lg p-8 fade-in">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Структура инвестиций</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Участок 2,535 м²</span>
+                            <span class="font-bold text-xl">700,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Строительство 400 м²</span>
+                            <span class="font-bold text-xl">800,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Отделка премиум</span>
+                            <span class="font-bold text-xl">400,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Инженерные системы</span>
+                            <span class="font-bold text-xl">200,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Благоустройство</span>
+                            <span class="font-bold text-xl">150,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-4 border-t-2 border-yellow-400">
+                            <span class="text-xl font-bold text-gray-900">ОБЩИЙ БЮДЖЕТ</span>
+                            <span class="font-bold text-2xl price-highlight">2,250,000€</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="investment-card rounded-2xl shadow-lg p-8 fade-in">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Доходность проекта</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Общие инвестиции</span>
+                            <span class="font-bold text-xl">2,250,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Рыночная стоимость</span>
+                            <span class="font-bold text-xl text-green-600">3,200,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Чистая прибыль</span>
+                            <span class="font-bold text-xl text-green-600">950,000€</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">ROI</span>
+                            <span class="font-bold text-xl text-green-600">42%</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                            <span class="text-gray-700">Срок окупаемости</span>
+                            <span class="font-bold text-xl">23 месяца</span>
+                        </div>
+                        <div class="flex justify-between items-center py-4 border-t-2 border-green-400">
+                            <span class="text-xl font-bold text-gray-900">Годовая доходность</span>
+                            <span class="font-bold text-2xl text-green-600">22%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Strategies -->
+    <section class="py-16 section-spacing">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Стратегии монетизации</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-home text-5xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Продажа</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-600">Продажа готовой виллы</p>
+                        <div class="text-3xl font-bold price-highlight">3,200,000€</div>
+                        <p class="text-sm text-gray-500">Прибыль: 950,000€</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-key text-5xl text-blue-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Аренда</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-600">Долгосрочная аренда</p>
+                        <div class="text-3xl font-bold text-blue-500">8000€</div>
+                        <p class="text-sm text-gray-500">в месяц</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover fade-in">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-calendar-alt text-5xl text-green-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Краткосрочная аренда</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-600">Премиум-аренда</p>
+                        <div class="text-3xl font-bold text-green-500">от 1000€</div>
+                        <p class="text-sm text-gray-500">за ночь</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Next Steps -->
+    <script>
+        // Animate counters
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    start = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(start).toLocaleString();
+            }, 16);
+        }
+
+        // Initialize animations when page loads
+        window.addEventListener('load', () => {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/,/g, ''));
+                if (!isNaN(target)) {
+                    animateCounter(counter, target);
+                }
+            });
+
+            // Stagger timeline animations
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.animationDelay = `${index * 0.1}s`;
+                }, index * 100);
+            });
+        });
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
